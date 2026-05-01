@@ -1,0 +1,153 @@
+[
+  {
+    "id": "evt_01HXYZ1234567890ABCDEF",
+    "type": "album.completed",
+    "spec_version": 1,
+    "occurred_at": "2026-05-01T14:23:18.421Z",
+    "organization_id": "org_01HXYZ0000000000ORGABC",
+    "data": {
+      "album_id": "alb_01HXYZ1111111111ALBCDE",
+      "album_name": "Champions League 2025/26",
+      "user_id": "usr_01HXYZ2222222222USRABC",
+      "user_external_id": "user@example.com",
+      "completed_at": "2026-05-01T14:23:18.421Z",
+      "total_stickers": 442,
+      "unique_stickers": 442
+    }
+  },
+  {
+    "id": "evt_01HXYZ1234567890ABCDFG",
+    "type": "album.threshold_reached",
+    "spec_version": 1,
+    "occurred_at": "2026-05-01T10:05:44.000Z",
+    "organization_id": "org_01HXYZ0000000000ORGABC",
+    "data": {
+      "album_id": "alb_01HXYZ1111111111ALBCDE",
+      "album_name": "Champions League 2025/26",
+      "user_id": "usr_01HXYZ2222222222USRABC",
+      "user_external_id": "user@example.com",
+      "threshold_percent": 75,
+      "stickers_owned": 331,
+      "total_stickers": 442
+    }
+  },
+  {
+    "id": "evt_01HXYZ1234567890ABCDHI",
+    "type": "item.claimed",
+    "spec_version": 1,
+    "occurred_at": "2026-05-01T09:15:00.000Z",
+    "organization_id": "org_01HXYZ0000000000ORGABC",
+    "data": {
+      "item_id": "itm_01HXYZ3333333333ITMCDE",
+      "item_name": "Lionel Messi",
+      "sticker_number": "47",
+      "album_id": "alb_01HXYZ1111111111ALBCDE",
+      "user_id": "usr_01HXYZ2222222222USRABC",
+      "user_external_id": "user@example.com",
+      "rarity": "common",
+      "claimed_at": "2026-05-01T09:15:00.000Z"
+    }
+  },
+  {
+    "id": "evt_01HXYZ1234567890ABCDJK",
+    "type": "item.rare_pulled",
+    "spec_version": 1,
+    "occurred_at": "2026-05-01T11:42:33.000Z",
+    "organization_id": "org_01HXYZ0000000000ORGABC",
+    "data": {
+      "item_id": "itm_01HXYZ4444444444ITMCDE",
+      "item_name": "Golden Boot Edition",
+      "sticker_number": "SP-01",
+      "album_id": "alb_01HXYZ1111111111ALBCDE",
+      "user_id": "usr_01HXYZ2222222222USRABC",
+      "user_external_id": "user@example.com",
+      "rarity": "legendary",
+      "pulled_at": "2026-05-01T11:42:33.000Z"
+    }
+  },
+  {
+    "id": "evt_01HXYZ1234567890ABCDLM",
+    "type": "pack.issued",
+    "spec_version": 1,
+    "occurred_at": "2026-05-01T08:00:00.000Z",
+    "organization_id": "org_01HXYZ0000000000ORGABC",
+    "data": {
+      "pack_id": "pck_01HXYZ5555555555PCKCDE",
+      "pack_type": "standard_5",
+      "user_id": "usr_01HXYZ2222222222USRABC",
+      "user_external_id": "user@example.com",
+      "campaign_id": "cmp_01HXYZ6666666666CMPCDE",
+      "issued_at": "2026-05-01T08:00:00.000Z",
+      "sticker_count": 5
+    }
+  },
+  {
+    "id": "evt_01HXYZ1234567890ABCDNO",
+    "type": "trade.settled",
+    "spec_version": 1,
+    "occurred_at": "2026-05-01T13:30:00.000Z",
+    "organization_id": "org_01HXYZ0000000000ORGABC",
+    "data": {
+      "trade_id": "trd_01HXYZ7777777777TRDCDE",
+      "initiator_user_id": "usr_01HXYZ2222222222USRABC",
+      "counterpart_user_id": "usr_01HXYZ8888888888USRDEF",
+      "items_given": ["itm_01HXYZ3333333333ITMCDE"],
+      "items_received": ["itm_01HXYZ4444444444ITMCDE"],
+      "settled_at": "2026-05-01T13:30:00.000Z"
+    }
+  },
+  {
+    "id": "evt_01HXYZ1234567890ABCDPQ",
+    "type": "campaign.started",
+    "spec_version": 1,
+    "occurred_at": "2026-05-01T07:00:00.000Z",
+    "organization_id": "org_01HXYZ0000000000ORGABC",
+    "data": {
+      "campaign_id": "cmp_01HXYZ6666666666CMPCDE",
+      "campaign_name": "Spring Kickoff Pack Drop",
+      "starts_at": "2026-05-01T07:00:00.000Z",
+      "ends_at": "2026-05-31T23:59:59.000Z",
+      "album_id": "alb_01HXYZ1111111111ALBCDE"
+    }
+  },
+  {
+    "id": "evt_01HXYZ1234567890ABCDRS",
+    "type": "campaign.ended",
+    "spec_version": 1,
+    "occurred_at": "2026-05-31T23:59:59.000Z",
+    "organization_id": "org_01HXYZ0000000000ORGABC",
+    "data": {
+      "campaign_id": "cmp_01HXYZ6666666666CMPCDE",
+      "campaign_name": "Spring Kickoff Pack Drop",
+      "ended_at": "2026-05-31T23:59:59.000Z",
+      "packs_issued": 12840,
+      "participants": 3421
+    }
+  },
+  {
+    "id": "evt_01HXYZ1234567890ABCDTU",
+    "type": "user.registered",
+    "spec_version": 1,
+    "occurred_at": "2026-05-01T06:45:00.000Z",
+    "organization_id": "org_01HXYZ0000000000ORGABC",
+    "data": {
+      "user_id": "usr_01HXYZ9999999999USRNEW",
+      "user_external_id": "newuser@example.com",
+      "registered_at": "2026-05-01T06:45:00.000Z",
+      "referral_campaign_id": null
+    }
+  },
+  {
+    "id": "evt_01HXYZ1234567890ABCDVW",
+    "type": "webhook.test",
+    "spec_version": 1,
+    "occurred_at": "2026-05-01T14:23:18.421Z",
+    "organization_id": "org_01HXYZ0000000000ORGABC",
+    "data": {
+      "message": "This is a test event from STICKR Admin UI",
+      "subscription_name": "My n8n Workflow",
+      "subscription_id": "sub_01HXYZ0000000000SUBCDE",
+      "triggered_by_user_id": "usr_01HXYZ0000000000ADMCDE"
+    }
+  }
+]
