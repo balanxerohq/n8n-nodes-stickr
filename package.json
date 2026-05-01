@@ -1,6 +1,6 @@
 {
     "name": "n8n-nodes-stickr",
-    "version": "0.0.1-alpha.2",
+    "version": "0.1.0",
     "description": "Official STICKR Trigger Node for n8n",
     "license": "MIT",
     "homepage": "https://developers.stickr.de/connectors/n8n",
