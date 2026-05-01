@@ -34,7 +34,12 @@
         "test:coverage": "vitest run --coverage"
     },
     "files": [
-        "dist"
+        "dist/credentials",
+        "dist/nodes",
+        "dist/package.json",
+        "README.md",
+        "LICENSE",
+        "CHANGELOG.md"
     ],
     "n8n": {
         "n8nNodesApiVersion": 1,
