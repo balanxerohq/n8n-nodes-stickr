@@ -1,2 +1,4 @@
 node_modules/
 dist/
+coverage/
+scripts/test-curl.sh
