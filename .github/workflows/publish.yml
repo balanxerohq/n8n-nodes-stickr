@@ -84,16 +84,31 @@ jobs:
       - name: Install dependencies
         run: 'npm ci'
 
-      - name: Release
-        # Publishes to npm with a provenance attestation (requires id-token: write above).
-        # Lint and build run automatically as part of the release process.
+      - name: Lint and build
+        run: |
+          npm run lint
+          npm run build
+
+      - name: Publish to npm
+        # Publishes with a provenance attestation (requires id-token: write above).
         #
-        # Option A (OIDC): leave NPM_TOKEN unset — the token step is skipped and
-        #   npm uses the OIDC exchange instead.
-        # Option B (token): set NPM_TOKEN in repo secrets — it is written to
-        #   .npmrc here before publishing.
+        # Auth — two options, both work:
+        #   Option A (OIDC Trusted Publishing): NPM_TOKEN secret is unset.
+        #     npm uses the OIDC token minted by id-token: write instead.
+        #   Option B (bootstrap token): NPM_TOKEN secret is set.
+        #     The token is written to .npmrc before publishing.
+        #
+        # Dist-tag — prerelease versions (e.g. 0.0.1-alpha.1) are published
+        # under their prerelease identifier (alpha, beta, rc) rather than
+        # "latest" to prevent them from becoming the default install target.
         run: |
           [ -n "$NPM_TOKEN" ] && npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
-          npm run release
+          VERSION=$(node -p "require('./package.json').version")
+          if [[ "$VERSION" =~ -([a-zA-Z]+) ]]; then
+            DIST_TAG="${BASH_REMATCH[1]}"
+          else
+            DIST_TAG="latest"
+          fi
+          npm publish --provenance --access public --tag "$DIST_TAG"
         env:
-          NPM_TOKEN: $
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
