@@ -109,6 +109,6 @@ jobs:
           else
             DIST_TAG="latest"
           fi
-          npm publish --provenance --access public --tag "$DIST_TAG"
+          npm publish --provenance --access public --tag "$DIST_TAG" --ignore-scripts
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
